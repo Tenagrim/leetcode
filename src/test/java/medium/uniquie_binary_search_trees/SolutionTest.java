@@ -14,5 +14,6 @@ public class SolutionTest {
         Assert.assertEquals(14, solution.numTrees(4));
         Assert.assertEquals(16796, solution.numTrees(10));
         Assert.assertEquals(477638700, solution.numTrees(18));
+        Assert.assertEquals(1767263190, solution.numTrees(19));
     }
 }
