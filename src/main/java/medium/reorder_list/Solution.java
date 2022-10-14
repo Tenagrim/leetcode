@@ -70,7 +70,7 @@ class Solution {
     }
 
     public ListNode reverse(ListNode head){
-        if(head.next == null)
+        if(head == null || head.next == null)
             return head;
         ListNode mid = head.next, front = head.next.next;
         if (head.next.next == null){
