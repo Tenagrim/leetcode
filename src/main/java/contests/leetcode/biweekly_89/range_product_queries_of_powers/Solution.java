@@ -8,7 +8,7 @@ public class Solution {
         int [] answers = new int[queries.length];
         int len = queries.length;
         List<Long> powers = new LinkedList<>();
-        for (int i = 0; i < 32; i++) {
+        for (long i = 0; i < 32L; i++) {
             long tmp = n &( 1 << i );
 
             if (tmp != 0)
@@ -21,10 +21,10 @@ public class Solution {
             int end = queries[i][1];
             long tmp = 1;
             for (int j = start; j <=end; j++) {
-                tmp *= powers.get(j);
+                tmp = tmp * powers.get(j) % 1000000007;
             }
-            int res = (int) (tmp % 1000000007);
-            answers[i] = res;
+
+            answers[i] =(int) tmp;
         }
         return answers;
     }
